@@ -77,7 +77,7 @@
     }
   </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" class="light">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -120,6 +120,28 @@
    <a href="Parul.resume.2020.pdf" target="_blank" class="fa fa-file-pdf-o" title="Resume"></a> 
   </div>
   </div>    
+  <script>
+    // A function for toggling the theme
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+        document.body.classList.toggle("dark");
 
+        localStorage.setItem(
+            "colorTheme",
+            document.body.classList.contains("dark") ? "dark" : "light"
+        );
+    }
+
+    // Initialize the theme
+    if (localStorage.getItem("colorTheme") === "dark") {
+        toggleTheme();
+    } else if (
+        localStorage.getItem("colorTheme") !== "light" &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        toggleTheme();
+    }
+</script>
 </body>
 </html>
