@@ -75,6 +75,24 @@
    p{
       font-style: oblique;
     }
+    
+    /* Light mode CSS */
+:root {
+  --text: #202020;
+  --background: #fafafa;
+}
+
+/* Dark mode CSS */
+body.dark {
+  --text: #fafafa;
+  --background: #202020;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+    
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" class="light">
@@ -118,6 +136,8 @@
   </div>
   <div style="vertical-align:middle; text-align:center;">
    <a href="Parul.resume.2020.pdf" target="_blank" class="fa fa-file-pdf-o" title="Resume"></a> 
+  </div>
+  <div> <button onclick="toggleTheme()">Toggle Theme</button>
   </div>
   </div>    
   <script>
