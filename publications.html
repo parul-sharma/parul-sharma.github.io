@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parul-Sharma</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   
+  body {
+      position: relative; 
+  }
+    
+p,li {
+    
+  text-align: justify;
+}
+p1 {
+    font-style: normal;
+    font-size:2.7;
+  text-align: justify;
+ 
+}
+    p2 {
+    font-style: oblique;
+    font-size:2.7;
+  font-weight:bold;
+      text-align: justify;
+}
+   p3{
+     color:#999999;
+    }
+   
+  .timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 46%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.one {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.two {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.three {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.four {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.five {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+    
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="accomplishments.html">Accomplishments</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+
+<!--<div class="container-fluid">
+ <div>
+  <h2>About Me</h2>
+  <p1 style="text-align:justify; font-size:2.5vmin;"> 
+    I am a Computational Biology graduate student from <a href="https://www.iiitd.ac.in/">IIIT-Dehli</a>, working on my thesis
+    with Dr.Vinod Scaria from <a href="https://www.igib.res.in/">IGIB</a> on Pharmacogenomic analysis of Arab populations. I did 
+    my undergrad in engineering with Biotechnology as my major from 
+    <a href="http://www.jiit.ac.in/">JIIT.</a> </p1>
+ </div>
+  <!--<p style="text-align:center; font-size:2.2vmin;">
+    With the knowledge of biology, I started my master's degree in Computational Biology. With subjects like, data science and
+  genomics, I gained interest in Pharmacogenomics and precision medicine, which are the focus areas of my thesis on- Pharmacogenomic 
+    analysis of Arab population.</p> where I gained experience in performing wet-lab experiments and an aptitude for research.
+    I graduated in Biotechnology from JIIT in 2015. During the 4 years of study, I worked in the field of microbiology- 
+    by studying bioremediation of inorganic pollutants using genetically engineered bacteria, and health science- by 
+    studying the role of prebiotics and probiotics in various diseases. I did my dissertation in my final year in the area
+    of microbiology and molecular biology - to study of bacteriocin-like-inhibitory substances on bacterial biofilms.>
+   <div>
+  <h2>Research Interests </h2>
+  <p1 style="text-align:center; font-size:2.2vmin;"> I am interested in studying the genetic basis of drug response <p2>[Pharmacogenomics]</p2>, how it varies in different populations
+    <p2>[Precision Medicine]</p2> and among different individuals <p2>[Personalized Medicine]</p2>.I have worked on Next 
+    generation sequencing data to analyze mutations and find novel ones. I have also used automated, semi-automated
+    and manual processes to curate databases including: <p2> Database for ACMG incidental findings </p2> and <p2>Database for disease
+    variants in Arab countries</p2>.</p1>-->
+  <!--<ul>
+          <li>Pharmacogenomics</li>
+          <li>Precision Medicine</li>
+          <li>Genomic/Exomic data interpretation</li>
+          <li>Disease Database curation</li>
+        </ul>
+  <p style="padding-top:40px; text-align:center; font-size:2.2vmin;">
+    For a better insight, here is my CV.
+    <a style="font-weight:bold;"href="parul-sharma.github.io/MT15123_Parul_Sharma.pdf">  [Link] </a></p>-->
+</div>
+  </div> 
+  
+  <div class="container" style="padding:10%">
+    <ul class="timeline">
+      <li>
+          <div class="timeline-badge four"><i class="fa fa-book" aria-hidden="true" title="Academic Project"></i></div>    
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Multi-Omics Pipeline</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Jan’19-May'19</small></p>
+              <p><small class="text-muted"> Advisor: <a href="https://www.cses.vt.edu/people/teaching-research-extension-faculty/songli.html">Dr. Song Li</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>MoP is a pipeline that integrates metagenomics, metatranscriptomics and metaproteomics data and uses all datasets 
+                to obtain a broader set of useful and insightful information from the samples. This information can be further used 
+                to answer biologically relevant questions related to the data.</p>
+              <p>Project and scripts available at <a href="https://github.com/mop-multi-omics-pipeline/mop">Github</a></p></div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge five"><i class="fa fa-lightbulb-o" aria-hidden="true" title="Research Project"></i></div>    
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Clinical Genomics and Personalized Medicine initiatives for Arabian Countries</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Jan’17-April’18</small></p>
+              <p><small class="text-muted"> Advisor: <a href="http://vinodscaria.rnabiology.org/">Dr. Vinod Scaria</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Precision Medicine is an emerging model of healthcare where the genetic makeup and its interaction
+                with the environment in incorporated towards precise treatment and management of a disease.
+                A number of diseases are quite prevalent in the Arab world. A large part of this is attributed to the widespread 
+                practice and norm of consanguinity in the region. Understanding the genetic characteristics of many such diseases 
+                would provide the much necessary knowledge to build an effective healthcare system where early screening, 
+                early diagnosis and effective management can significantly reduce the morbidity and mortality due to such diseases.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge four"><i class="fa fa-book" aria-hidden="true" title="Academic Project"></i></div>    
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Naiive Bayes Classifier for gene expression data</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Mar’17-Apr'17</small></p>
+              <p><small class="text-muted"> Advisor: <a href="https://www.iiitd.ac.in/vibhork">Dr. Vibhor Kumar</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>A Naive Bayesian classifier was developed which categorized gene-expression dataset into Control
+                and Case class. The data was normalized to fit the range [0,1] and gaussian distribution was used for calculating 
+                the posterior probability. The accuracy of the classifier for the given dataset was 60 - 70% keeping in account that
+                the test and training data was randomly selected from the corpus. An approximation which did not allow R to approximate
+                very small values to 0 or large values to infinity was chosen which increased the accuracy between 70-80%. Feature
+                selection using PCA was done and the top 10 features were used which showed no significant imporvement in the accuracy 
+                as the dataset was very noisy.</p></div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge three"><i class="fa fa-lightbulb-o" aria-hidden="true" title="Research Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">An online tool for reporting of ACMG approved incidental findings in sequencing data</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Aug’16-Jan’17</small></p>
+              <p><small class="text-muted"> Advisor: <a href="http://vinodscaria.rnabiology.org/">Dr. Vinod Scaria</a></small></p>
+           </div>
+            <div class="timeline-body">
+              <p>In 2011, American College of Medical Genetics (ACMG) formed a working group with the main aim of promoting standardized
+                reporting of sequencing data and announced essential reporting of incidental/secondary findings in sequencing data. 
+                The working group published a list of genes, and announced the reporting of all variants from the genes 
+                irrespective of its relevance for which the sequencing was performed. The tool checks if a sequencing data has 
+                variants falling on any of the ACMG provided minimum list of 59 genes from a manually curated database. It then
+                provides useful gene-disease annotations of the matched variants categorised into pathogenic, likely pathogenic and 
+                uncertain significance, in a comprehensive report format. The user can select the variants he/she wants to print 
+                in the report from the list of matched variants. </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge two"><i class="fa fa-book" aria-hidden="true" title="Academic Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Protein simulation using structure modelling tool- SMOG server </h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Oct’16-Nov’16</small></p>
+              <p><small class="text-muted"> Advisor: <a href="http://ccbb.jnu.ac.in/arnab/">Dr. Arnab Bhattacherjee</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>The smog-server webtool interface provides all the necessary information for performing structure-based simulations 
+                of proteins, nucleic acids, as well as many supported ligands. In addition, the webtool can handle all preprocessing
+                steps that are necessary to prepare a structure-based forcefield for a given molecular structure. The tool was used to
+                simulate the dynamics of PDB-Id=1BC8 protein in absence of water and DNA molecules. The simulations were recorded at different 
+              temperatures and the resulting data was used to calculate the folding temperature of the protein.</p></div>
+          </div>
+        </li>
+      
+        <li class="timeline-inverted">
+          <div class="timeline-badge one"><i class="fa fa-book" aria-hidden="true" title="Academic Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Simulating Newtonian equations for multi-particle system in R</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Aug’16-Sep’16</small></p>
+              <p><small class="text-muted"> Advisor: <a href="http://ccbb.jnu.ac.in/arnab/">Dr. Arnab Bhattacherjee</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>A multi-particle system was simutaled using Monte-Carlo Simulations with periodic boundary conditions. The trajectory 
+                of motion of the particles acted upon by Langevin potential, was recorded at different time intervals. 
+                </p></div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge five"><i class="fa fa-lightbulb-o" aria-hidden="true" title="Research Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">BAX activation in pre-mitochondrial apoptosis pathway using Monte Carlo simulations </h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Mar’16-Jul’16</small></p>
+              <p><small class="text-muted"> Advisor: <a href="https://www.iiitd.ac.in/subhadip">Dr. Subhadip Raychaudhuri</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>This simulation was carried out on a 50X50 membrane wrapped around the boundaries to replicate
+mitochondrial membrane of the cell. The pre-mitochondrial regulation takes place on this membrane,
+ultimately resulting into Bax activation and consequently mitochondrial outer membrane permeabilization
+(MOMP) governing the release of pro-death factors from the inter-membrane space (IMS), which engage
+                caspases to carry out the apoptotic signalling cascade.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge four"><i class="fa fa-book" aria-hidden="true" title="Academic Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Data analysis for whole-exome sequencing data to detect significant SNPs that can be associated with the underlying genetic disease</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Jan’16-May’16</small></p>
+              <p><small class="text-muted"> Advisor: <a href="https://ibse-iitm.github.io/team/Rohit-Gupta">Dr. Rohit Gupta</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Real-time data in the form of sequencing data of 4 families was used to detect the causal variants of the disease.
+                Various analysis tools (SAMtools, BAMtools), filtering techniques and pedigree analysis were used to analyse the given data 
+                and draw meaningfull conclusions. </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge three"><i class="fa fa-lightbulb-o" aria-hidden="true" title="Research Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">To study the effect of Bacteriocin-like-inhibitory substances on bacterial biofilms </h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Aug’14-May’15</small></p>
+              <p><small class="text-muted"> Advisor: <a href="http://www.jiit.ac.in/reema-gabrani">Dr. Reema Gabrani</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Bacterial biofilms are causative agents to many harmful diseases and their resistance to most antibiotics further 
+                increases threat. Bacteriocins are small antimicrobial peptides that act against the biofilms and thus can be used 
+                as potential therapeutics in curing biofilm related diseases. In the experiment, a novel bacteriocin was isolated from 
+                Bacillus subtilis and its effect was measured on various biofilm forming bacterial strains. </p>
+            </div>
+        </li>
+      <li class="timeline-inverted">
+          <div class="timeline-badge two "><i class="fa fa-book" aria-hidden="true" title="Research Project"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Role of Prebiotics, Probiotics, Synbiotics and gut microbiota in obesity</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Aug’13 – Dec’13</small></p>
+              <p><small class="text-muted"> Advisor: <a href="http://www.jiit.ac.in/prof-neeraj-wadhwa">Dr. Neeraj Wadhwa</a></small></p>
+            </div>
+            <div class="timeline-body">
+              <p>Gut microbiota modulate host energy homeostasis and adiposity through different mechanisms, e.g., energy harvest 
+                from the diet, LPS-induced chronic inflammation, modulation of tissue fatty acid composition, and gut-derived peptide 
+                secretion and hence effect of the onset of diseases like obesity.</p>
+            </div>
+          </div>
+        </li>
+      <li>
+          <div class="timeline-badge four"><i class="fa fa-book" aria-hidden="true" title="Research Project"></i></div>
+          <div class="timeline-panel">
+            
+            <div class="timeline-body">
+              <p>Dangayach, S., <b>P. Sharma</b>, P. Singhai, and N. Gupta. "Microbial removal of arsenic: Mechanisms and applications." As. J. Multidis. Stud 2 (2014): 159-170. </p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+  
+  
+</body>
+</html>
