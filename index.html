@@ -160,7 +160,29 @@ body {
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" class="light">
+<script>
+    // A function for toggling the theme
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+        document.body.classList.toggle("dark");
 
+        localStorage.setItem(
+            "colorTheme",
+            document.body.classList.contains("dark") ? "dark" : "light"
+        );
+    }
+
+    // Initialize the theme
+    if (localStorage.getItem("colorTheme") === "dark") {
+        toggleTheme();
+    } else if (
+        localStorage.getItem("colorTheme") !== "light" &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        toggleTheme();
+    }
+</script>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -190,7 +212,7 @@ body {
     <img src="Parul.jpg">
   </div>
   <div style="padding-top:20px; text-align:center";> 
-    <label class="switch">
+    <label class="switch" onclick="toggleTheme()">
       <input type="checkbox">
       <span class="slider round"></span>
     </label>
@@ -207,7 +229,7 @@ body {
   </div>
   <div style="vertical-align:middle; text-align:center;">
    <p style="padding-top:10px; text-align:center; font-size:2.2vmin;font-family:cursive;"> Resume :
-             <a href="Parul.resume.2020.pdf" target="_blank" class="fa fa-file-pdf-o"></a> Email: 
+             <a href="Parul-CV-Aug-2021.pdf" target="_blank" class="fa fa-file-pdf-o"></a> Email: 
              <a href="mailto:parul15123@iiitd.ac.in" target="_blank" class="fa fa-envelope"> </a> </p>
         
   
@@ -215,7 +237,7 @@ body {
   </div>
   
   </div>    
-  <script>
+  <!--<script>
    // A function for toggling the theme
     function toggleTheme() {
         document.body.classList.toggle("light");
@@ -237,7 +259,7 @@ body {
     ) {
         toggleTheme();
     }
-</script>
+</script>-->
   
 </body>
 </html>
