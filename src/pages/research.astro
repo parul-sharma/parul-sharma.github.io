@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title="Projects" sideBarActiveItemID="services">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Research Interests</div>
+  </div>
+
+  <HorizontalCard
+    title="Antimicrobial Resistance and Clinical Pathogens"
+    img="/post_img.webp"
+    desc="A significant area of my research focuses on the role of antimicrobial resistance (AMR) in the spread of clinical pathogens, specifically Chlamydia and Staphylococcus aureus. I have developed tools and pipelines for genomics and metagenomic data analysis to better understand and track the emergence of AMR. For example, during a recent workshop, I introduced LINtax, a novel tool designed for precise lineage identification and taxonomic classification of microbial genomes. This tool and others like it are crucial for monitoring AMR patterns and informing treatment strategies to combat resistant infections."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Wastewater Surveillance for Antimicrobial Genes "
+    img="/post_img.webp"
+    desc="My research also extends to environmental microbiology, particularly the use of wastewater surveillance to track the spread of antimicrobial resistance genes. Wastewater provides a rich and complex sample matrix that can reflect the microbial and resistance gene profiles of the human population. By applying metagenomics approaches, I have been able to identify and quantify the presence of resistance genes in wastewater, providing valuable data for public health monitoring and the early detection of potential outbreaks."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Metagenomics and Microbial Ecology"
+    img="/post_img.webp"
+    desc="I am deeply interested in the application of metagenomics to investigate microbial communities and their roles in different environments. My research has demonstrated the utility of long-read metagenomics for detecting plant disease outbreaks and resolving phylogenetic relationships, as seen in our studies on Xylella fastidiosa and Pseudomonas syringue pathogens. My work on Ralstonia solanacearum species complex (RSSC) involved comparative evolutionary genomics and reverse ecology to elucidate the genetic basis of pathogenicity and host specificity, aiding in the identification of outbreak strains​. This capability is essential for implementing timely and effective disease control measures and minimizing the impact of outbreaks on public health and agriculture."
+    url="#"
+    
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Genetic Epidemiology and Bioinformatics"
+    img="/post_img.webp"
+    desc="I am also interested in genetic epidemiology and the integration of bioinformatics tools to study disease variants in human populations. My research on the genetic landscape of rare autoinflammatory disease variants in Qatar and Middle Eastern populations involved the analysis of whole-genome and exome datasets to identify disease-associated alleles. This work underscores the significance of genetic diversity in understanding disease susceptibility and developing personalized medicine approaches. Furthermore, my experience in bioinformatics and computational biology enables me to leverage advanced data analysis techniques to address complex biological questions and improve health outcomes."
+    url="#"
+  />
+</BaseLayout>

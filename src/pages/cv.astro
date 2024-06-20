@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    I am dedicated to advancing the field of bioinformatics through innovative research and data analysis.
+     This involves working on various research projects, developing new computational methods, and collaborating
+      with other scientists. My work aims to uncover new insights in biology and contribute to the scientific community.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="PhD in Bioinformatics"
+      subtitle="2018 to 2023 at Virginia Tech, Blacksburg, USA"
+    />
+    <TimeLineElement
+      title="Masters in Computational Biology"
+      subtitle="2015 to 2017 at IIIT-Delhi, Delhi, India"
+    />
+    <TimeLineElement
+      title="B.Tech in Biotechnology"
+      subtitle="2011 to 2015 at Jaypee Institute of Information Technology, Noida, India"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Assistant Bioinformatics Scientist"
+      subtitle="Sept,2023 onwards at Emory University, Atlanta, USA "
+    >
+    Research focus: Detecting the spread of antimicrobial resistant strains in infectious diseases. 
+    <br>Advisor: Timothy Read
+    <br><br>
+  </TimeLineElement>
+
+    <TimeLineElement
+      title="Research Intern"
+      subtitle="May,2022 to Aug,2022 at Vertex Pharmaceuticals , Boston, USA"
+    >
+    Research focus: Validating and benchmarking clinical pipeline for gene-editing-based disease therapies. 
+    <br>Advisor: Rebecca Fine
+    <br><br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Graduate Research Assistant"
+      subtitle="Aug,2017 to Dec,2017 at Indraprastha Institute of Information Technology, Delhi, India"
+    >
+    Research focus: Post-mitochondrial apoptotic pathway study using Monte Carlo models. 
+    <br>Advisor: Subhadip Raychaudhuri
+    <br><br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Research Intern"
+      subtitle="May,2017 to Dec,2017 at Institute of Genomics and Integrative Biology, Delhi, India"
+    >
+    Research focus: Clinical genomics and personalized medicine initiatives for Arabian countries. 
+    <br>Advisor: Vinod Scaria
+    <br><br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Research Intern"
+      subtitle="May,2014 to Aug,2014 at Centre for Genetic Manipulation of Crop Plants, Delhi, India"
+    >
+    Research focus: Analyzing the protein content in different Brassica species for improving the quality of mustard seeds. 
+    <br>Advisor: Yaspal Singh Sodhi
+    <br><br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Intern"
+      subtitle="Dec,2013 to Jan,2014 at Rajiv Gandhi Cancer Hospital and Research Center, Delhi, India"
+    >
+    Research focus: Learning to perform pathological testing in Biochemistry, Microbiology and Hematology departments.
+    <br><br>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+    <li>Skill Name</li>
+  </ul>
+</BaseLayout>
