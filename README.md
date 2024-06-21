@@ -1,25 +1,25 @@
-# Astrofy | Personal Portfolio Website Template
+# Astro Modern Personal Website
 
-![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
+![Astro Modern Personal Website](public/social_img.png)
 
-Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with a Blog, CV, Project Section, Store, and RSS Feed.
+Modern Personal Website Template with Project Section, CV Section, Paginated Blog, RSS Feed, SEO Friendly, Visual themes and Responsive Desing for Astro framework.
 
 ## Demo
 
-View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
+View a live demo of the [Astro Modern Personal Website](https://astro-modern-personal-website.netlify.app/)
 
 ## Installation
 
 Run the following command in your terminal
 
 ```bash
-pnpm install
+npm install
 ```
 
 Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 ## Tech Stack
@@ -28,21 +28,19 @@ pnpm run dev
 - [tailwindcss](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 
-## Project Structure
+## Project Strucutre
 
 ```php
 ├── src/
 │   ├── components/
-│   │   ├── cv/
+│   │   ├── cs/
 │   │   │   ├── TimeLine
 │   │   ├── BaseHead.astro
 │   │   ├── Card.astro
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
-│   │   └── HorizontalCard.astro
-│   │   └── SideBar.astro
-│   │   └── SideBarMenu.astro
-│   │   └── SideBarFooter.astro
+│   │   └── HorizontalCard.jsx
+│   │   └── SideBar.jsx
 │   ├── content/
 │   │   ├── blog/
 │   │   │   ├── post1.md
@@ -62,12 +60,12 @@ pnpm run dev
 │   │   └── index.astro
 │   │   └── projects.astro
 │   │   └── rss.xml.js
-│   ├── styles/
-│   │   └── global.css
-│   └── config.ts
+│   └── styles/
+│       └── global.css
 ├── public/
 │   ├── favicon.svg
-│   └── profile.webp
+│   └── social-image.png
+│   └── sprofile.jpg
 │   └── social_img.webp
 ├── astro.config.mjs
 ├── tailwind.config.cjs
@@ -75,56 +73,38 @@ pnpm run dev
 └── tsconfig.json
 ```
 
-### Site config
-
-You can change global site configuration on '/src/config.ts' file:
-
-- **SITE_TITLE**: Default pages title.
-- **SITE_DESCRIPTION**: Default pages title.
-- **GENERATE_SLUG_FROM_TITLE**: By default Astrofy will generate the blog slug pages base on the article name. Set this var to false if you want to use the Astro file base (Compatible with Astrofy older versions).
-- **TRANSITION_API**: Enable and disable transition API
-
 ### Components usage
 
 #### Layout Components
 
-The `BaseHead`, `Footer`, `Header`, and `SideBar` components are already included in the layout system. To change the website content you can edit the content of these components.
+The `BaseHead`, `Footer`, `Header` and `SideBar` components are already included in the layout sistem. To change the website content you can edit the content of this components.
 
 ##### SideBar
 
-In the Sidebar you can change your profilePicture, links to all your website pages, and your social icons.
+In the Sidebar you can change the links to all your website pages.
 
 You can change your avatar shape using [mask classes](https://daisyui.com/components/mask/).
 
-The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack. You can replace the icons in the `SideBarFooter` component
+The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack.
 
-To add a new page in the sidebar go to the `SideBarMenu` component.
-
-```
-<li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-
-```
-
-**Note**: In order to change the sidebar menu's active item, you need to setup the prop `sideBarActiveItemID` in the `BaseLayout` component of your new page and add that id to the link in the `SideBarMenu`
+**Note**: In order to change the sidebar menu's active item style, look for the `activeClass` constant and change its value to your desired style (e.g. `active` for the primary colour).
 
 #### TimeLine
 
-The timeline components are used to confirm the CV.
+The timeline components are used to conform the CV.
 
 ```html
 <div class="time-line-container">
-  <TimeLineElement title="Element Title" subtitle="Subtitle">
-    Content that can contain
-    <div>divs</div>
-    and <span>anything else you want</span>.
-  </TimeLineElement>
+  <TimeLineElement
+    title="Element Title"
+    subtitle="Subtitle"
+    desc="Description"
+  />
   ...
 </div>
 ```
 
 #### Card & HorizontalCard
-
-The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description. 
 
 ```html
 <HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
@@ -134,8 +114,7 @@ tags={['Array','of','tags']} />
 
 #### HorizontalCard Shop Item
 
-
-This component is already included in the Store layout of the template. In case you want to use it in another place these are the props.
+This compoenet is already included in the Store layout of the template. In case you want to use it in other place this are the props.
 
 ```html
 <HorizontalShopItem
@@ -153,28 +132,9 @@ This component is already included in the Store layout of the template. In case 
 />
 ```
 
-#### Adding a Custom Component
-
-To add a custom component, you can create a .astro file in the components folder under the source folder. 
-
-Components must follow this template. The ```---``` represents the code fence and uses Javascript and can be used for imports. 
-
-The HTML component is the actual style of your new component. 
-
-```html
----
-// Component Script (JavaScript)
----
-<!-- Component Template (HTML + JS Expressions) -->
-```
-
-For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here. 
-
 ### Layouts
 
 Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
-
-The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the ```../config``` folder. Data placed there can be imported anywhere using import. 
 
 ### Content
 
@@ -221,11 +181,11 @@ Add your `md` item in the `/pages/shop/` folder.
 
 ##### [page].astro
 
-The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you include inside this folder.
+The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you incle inside this folder.
 
 ##### Item format
 
-Add code with this format at the top of each item file.
+Add code with this format in the top of each item file.
 
 ```js
 ---
@@ -245,15 +205,15 @@ checkoutUrl: "https://checkouturl.com/"
 
 #### Static pages
 
-The other pages included in the template are static pages. The `index` page belongs to the root page. You can add your pages directly in the `/pages` folder and then add a link to those pages in the `sidebar` component.
+The other pages inlcuded in the template are static pages. The `index` page belong to the root page. You can add your pages directly in the `/pages` folder and then add a link to that pages in the `sidebar` component.
 
 Feel free to modify the content included in the pages that the template contains or add the ones you need.
 
 ### Theming
 
-To change the template theme change the `data-theme` attribute of the `<html>` tag in `BaseLayout.astro` file.
+For change the template theme change the `data-theme` atribute of the `<html>` tag in `BaseLayout.astro` file.
 
-You can choose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
+You can chose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
 
 ## Sitemap
 
@@ -261,7 +221,7 @@ The Sitemap is generated automatically when you build your website in the root o
 
 ## Deploy
 
-You can deploy your site on your favourite static hosting service such as Vercel, Netlify, GitHub Pages, etc.
+You can deploy your site on your favorite static hosting service such as Vercel, Netlify, GitHub Pages, etc.
 
 The configuration for the deployment varies depending on the platform where you are going to do it. See the [official Astro information](https://docs.astro.build/en/guides/deploy/) to deploy your website.
 
@@ -272,18 +232,18 @@ The configuration for the deployment varies depending on the platform where you 
 
 Suggestions and pull requests are welcomed! Feel free to open a discussion or an issue for a new feature request or bug.
 
-One of the best ways to contribute is to grab a [bug report or feature suggestion](https://github.com/manuelernestog/astrofy/issues) that has been marked `accepted` and dig in.
+One of the best ways of contribute is to grab a [bug report or feature suggestion](https://github.com/manuelernestog/astro-modern-personal-website/issues) that has been marked `accepted` and dig in.
 
 Please be wary of working on issues _not_ marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
 
 ## License
 
-Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astrofy/blob/main/LICENSE) file for details.
+Astro Modern Personal Website is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astro-modern-personal-website/blob/main/LICENSE) file for details.
 
 ## Contributors
 
-<a href="https://github.com/manuelernestog/astrofy/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
+<a href="https://github.com/manuelernestog/astro-modern-personal-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=manuelernestog/astro-modern-personal-website" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).

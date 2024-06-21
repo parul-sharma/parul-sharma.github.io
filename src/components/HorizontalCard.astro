@@ -1,20 +1,19 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
-import { Image } from "astro:assets";
-const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
+const { title, img, desc, url, badge, tags, download, target = "_blank" } = Astro.props;
+import { Image } from "@astrojs/image/components";
 ---
 
 <div
   class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
-  <a href={url} target={target}>
+  <a href={url} target={target} download={download}>
     <div class="hero-content flex-col md:flex-row">
       {
         img && (
           <Image
             src={img}
+            aspectRatio="16:9"
             width={750}
-            height={422}
             format="webp"
             alt={title}
             class="max-w-full md:max-w-[13rem] rounded-lg"
@@ -26,15 +25,11 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           {title}
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
-        <p class="py-1 text-1xl" set:html={desc}></p>
+        <p class="py-1 text-1xl">{desc}</p>
         <div class="card-actions justify-end">
           {
             tags &&
-              tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
-                  {tag}
-                </a>
-              ))
+              tags.map((tag) => <div class="badge badge-outline">{tag}</div>)
           }
         </div>
       </div>
