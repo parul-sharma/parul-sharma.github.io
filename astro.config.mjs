@@ -15,7 +15,7 @@ export default defineConfig({
       cacheDir: "./.cache/image",
       logLevel: 'debug',
     }
-  )]
+  )],
   experimental: {
     viewTransitions: true
 }
