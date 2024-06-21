@@ -1,3 +1,4 @@
+
 ---
 import { BlogSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
@@ -13,11 +14,7 @@ const displayDate = dayjs(pubDate).format("ll");
 import { Image } from "@astrojs/image/components";
 ---
 
-<<<<<<< HEAD
 <BaseLayout title={title} description={description} image={heroImage}>
-=======
-<BaseLayout title={title} description={description} image={heroImage} >
->>>>>>> 2c6c84247f01c6498e5d533d5fd87d16b36980bb
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {
