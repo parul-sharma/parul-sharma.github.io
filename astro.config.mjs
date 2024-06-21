@@ -20,6 +20,6 @@ export default defineConfig({
     }),
   ],
   experimental: {
-    viewTransitions: true
-}
+    viewTransitions: true,
+},
 });
