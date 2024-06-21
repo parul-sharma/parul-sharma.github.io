@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://https://parul-sharma.github.io',
+  site: 'https://parul-sharma.github.io',
   integrations: [mdx(), sitemap(), tailwind()]
 });
