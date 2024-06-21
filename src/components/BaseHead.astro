@@ -7,10 +7,9 @@ export interface Props {
 	title: string;
 	description: string;
 	image?: string;
-	ogType?: string;
 }
 
-const { title, description, image = '/social_img.webp', ogType = 'website' } = Astro.props;
+const { title, description, image = '/social_img.webp' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
