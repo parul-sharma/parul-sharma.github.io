@@ -16,4 +16,7 @@ export default defineConfig({
       logLevel: 'debug',
     }
   )]
+  experimental: {
+    viewTransitions: true
+}
 });
